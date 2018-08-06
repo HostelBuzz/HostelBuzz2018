@@ -18,6 +18,16 @@ namespace HostelBuzzApi.Areas.BLL
             {
                 return base.GetUserDetails();
             }
+        internal new List<UserDetails> GetUserById(int id)
+        {
+            int vendorid = id;
+            return base.GetUserById(vendorid);
         }
+        internal new int SaveOrUpdateUser(UserDetails userDetails)
+        {
+            int res = base.SaveOrUpdateUser(userDetails);
+            return res;
+        }
+    }
     }
 

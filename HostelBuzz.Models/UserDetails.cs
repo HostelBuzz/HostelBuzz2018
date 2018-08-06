@@ -33,7 +33,9 @@ namespace HostelBuzz.Models
 
         public DateTime created_on { get; set; }
 
-        public bool is_active { get; set; }
+        public string is_active { get; set; }
+
+        public int role_id { get; set; }
     }
 }
 

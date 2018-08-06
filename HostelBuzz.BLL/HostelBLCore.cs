@@ -29,6 +29,36 @@ namespace HostelBuzz.BLL
             }
             return objUserDetails;
         }
+
+        protected List<UserDetails> GetUserById(int id)
+        {
+            List<UserDetails> objVendorById = null;
+            int vendorid = id;
+            try
+            {
+                objVendorById = new HostelDAL().GetUserById(vendorid);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return objVendorById;
+        }
+
+        protected int SaveOrUpdateUser(UserDetails userDetails)
+        {
+            int res=0;            
+            try
+            {
+                res = new HostelDAL().SaveOrUpdateUser(userDetails);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return res;
+        }
         #endregion
+
     }
 }
