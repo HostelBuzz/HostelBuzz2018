@@ -7,7 +7,7 @@ using HostelBuzz.Models;
 using System.Configuration;
 using System.Data;
 using MySql.Data.MySqlClient;
-
+//a comment from sreejith enc github test
 namespace HostelBuzz.DAL
 {
     public class HostelDAL
