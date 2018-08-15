@@ -8,6 +8,7 @@ using System.Configuration;
 using System.Data;
 using MySql.Data.MySqlClient;
 //a comment from sreejith enc github test
+//a comment from sreejithgithub
 namespace HostelBuzz.DAL
 {
     public class HostelDAL

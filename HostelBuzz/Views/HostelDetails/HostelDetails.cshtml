@@ -1,10 +1,23 @@
-﻿@model IEnumerable<HostelBuzz.Models.HostelDetails>  
-@{  
-     
-    ViewBag.Title = "Hostel Details";  
-}  
-   
-<table class="table">  
+﻿@model IEnumerable<HostelBuzz.Models.HostelDetails>
+@{
+
+    ViewBag.Title = "Hostel Details";
+}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//geodata.solutions/includes/countrystatecity.js"></script>
+<body>
+    <select name="country" class="countries" id="countryId">
+        <option value="">Select Country</option>
+    </select>
+    <select name="state" class="states" id="stateId">
+        <option value="">Select State</option>
+    </select>
+    <select name="city" class="cities" id="cityId">
+        <option value="">Select City</option>
+    </select>
+</body>
+
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.HostelName)
@@ -27,35 +40,36 @@
         <th>
             @Html.DisplayNameFor(model => model.City)
         </th>
-    </tr>  
-    @foreach (var item in Model) {  
-        <tr>  
-            <td>  
-                @Html.DisplayFor(modelItem=>item.HostelName)  
-            </td>  
-            <td>  
-                @Html.DisplayFor(modelItem=> item.HostelAddress)  
-            </td>  
-            <td>  
-                @Html.DisplayFor(modelItem => item.HostelPhone)  
-            </td>  
-            <td>  
-                @Html.DisplayFor(modelItem => item.HostelEmailID)  
-            </td>  
-            <td>  
-                @Html.DisplayFor(modelItem => item.ContactPerson)  
-            </td>  
-            <td>  
-                @Html.DisplayFor(modelItem => item.State)  
-            </td>  
-            <td>  
-                @Html.DisplayFor(modelItem => item.City)  
-            </td>  
-            <td>  
-                @Html.ActionLink("Edit", "Edit", new { id = item.HostelID }) |  
-                @Html.ActionLink("Details", "Details", new { id = item.HostelID }) |  
-                @Html.ActionLink("Delete", "Delete", new { id = item.HostelID })  
-            </td>  
-        </tr>  
-    }         
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HostelName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HostelAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HostelPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HostelEmailID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactPerson)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.HostelID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.HostelID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.HostelID })
+            </td>
+        </tr>
+    }*@
 </table>  
